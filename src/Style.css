@@ -1,8 +1,16 @@
 body{
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #222831;
     font-family:sans-serif;
+}
+
+.theTask {
+    width: 100% !important;
+}
+
+.theTask h1{
+    width: 100% !important;
 }
 
 .Main{
@@ -138,4 +146,48 @@ img{
 
 .formContainer label{
     font-size: 48px;
+}
+
+@media screen and (max-width:400px) {
+
+    #logo{
+        margin-top: 0rem;
+    }
+
+    .mainContainer{
+        width: 80%;
+        height: 70vh;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .formContainer{
+        width: 100%;
+    }
+
+    .inputTask{
+        width: 70%;
+    }
+
+    .btn{
+        width: 70%;
+    }
+
+    .taskContainer{
+        width: 90%;
+        border-left: none;
+    }
+
+    img{
+        width: 52vw;
+    }
+
+    #img3{
+        bottom: -12rem;
+        right: 1rem;
+    }
+
+
+
+    
 }
