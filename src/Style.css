@@ -18,8 +18,9 @@ body{
 #logo{
     font-size: 64px;
     color: white;
-    padding: 3rem 0rem;
+    padding: 1rem 5rem;
     margin-top: -10rem;
+    box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
 }
 
 #logo span{
@@ -36,6 +37,7 @@ body{
     justify-content: center;
     background-color: #393E46;
     color: white;
+    margin-bottom: -3rem;
 }
 
 .formContainer{
@@ -57,6 +59,7 @@ body{
     border: 1px solid black;
     outline: none;
     border-radius: 10px;
+    font-size: 18px;
 }
 
 .btn{
@@ -100,7 +103,7 @@ img{
 
 #img1{
     top: 2rem;
-    left: -5rem;
+    left: -4rem;
     z-index: -1;
 }
 
