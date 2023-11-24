@@ -37,6 +37,18 @@ function App(){
     const handleClick = (index: number) => {
         setTask(prevTasks => prevTasks.filter((_, i) => i !== index));
     };
+
+    const handleDone = (index: number) => {
+        const element = document.getElementById(`${index}`);
+        console.log(element);
+        if(element)
+        {
+            element.style.backgroundColor = "#03C588";
+        }
+        const check = document.getElementById("check"+`${index}`);
+        console.log(check);
+        check?.classList.add("hidden");
+    };
     
 
 
@@ -46,6 +58,7 @@ function App(){
                     <img src={svg1} id='img1'></img>
                     <img src={svg3} id='img3'></img>
             </div>
+            <h1 id='logo'>To<span>Do</span> A<span>pp</span></h1>
             <div className='mainContainer'>
                 <form className='formContainer' onSubmit={handleSubmit}>
                     <label>Tasks</label>
@@ -55,8 +68,8 @@ function App(){
                 <div className='taskContainer'>
                     {task.map((currentTask, index) => (
                         <div className="theTask">
-                            <h1 key={index}>{currentTask}</h1>
-                            <img src={svg4} onClick={()=>handleClick(index)}/>
+                            <h1 key={index} id={index.toString()}>{currentTask}</h1>
+                            <img src={svg4} id={"check"+index.toString()} onClick={()=>handleDone(index)}/>
                             <img src={svg5} onClick={()=>handleClick(index)}/>
                         </div>
                     ))}

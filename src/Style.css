@@ -2,6 +2,7 @@ body{
     margin: 0;
     overflow: hidden;
     background-color: #222831;
+    font-family:sans-serif;
 }
 
 .Main{
@@ -11,6 +12,18 @@ body{
     justify-content: center;
     flex-direction: column;
     width: 100vw;
+    text-align: center;
+}
+
+#logo{
+    font-size: 64px;
+    color: white;
+    padding: 3rem 0rem;
+    margin-top: -10rem;
+}
+
+#logo span{
+    color: #3F72AF;
 }
 
 .mainContainer{
@@ -27,7 +40,7 @@ body{
 
 .formContainer{
     display: flex;
-    width: 60%;
+    width: 40%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -66,7 +79,7 @@ body{
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 60%;
 }
 
 .taskContainer h1{
@@ -86,14 +99,15 @@ img{
 }
 
 #img1{
-    top: 1rem;
+    top: 2rem;
     left: -5rem;
+    z-index: -1;
 }
 
 
 #img3{
     bottom: 1rem;
-    right: -5rem;
+    right: -3rem;
 }
 
 .theTask{
@@ -113,4 +127,12 @@ img{
 }
 .theTask img:hover{
     box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hidden{
+    display: none;
+}
+
+.formContainer label{
+    font-size: 48px;
 }
