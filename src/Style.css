@@ -5,14 +5,6 @@ body{
     font-family:sans-serif;
 }
 
-.theTask {
-    width: 100% !important;
-}
-
-.theTask h1{
-    width: 100% !important;
-}
-
 .Main{
     display: flex;
     height: 100vh;
@@ -81,15 +73,15 @@ body{
 }
 
 .taskContainer{
+    box-sizing: border-box;
     height: 50vh;
-    overflow-y:auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 5px;
-    border-left: 2px solid black;
+    box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
     width: 60%;
 }
 
@@ -150,15 +142,20 @@ img{
 
 @media screen and (max-width:400px) {
 
+    .Main{
+        height:max-content;
+    }
+
     #logo{
         margin-top: 0rem;
     }
 
     .mainContainer{
         width: 80%;
-        height: 70vh;
+        height: 100vh;
         flex-direction: column;
         padding: 1rem;
+        gap: 1rem;
     }
 
     .formContainer{
@@ -174,7 +171,8 @@ img{
     }
 
     .taskContainer{
-        width: 90%;
+        width: 100%;
+        height: 70vh;
         border-left: none;
     }
 
@@ -183,11 +181,17 @@ img{
     }
 
     #img3{
-        bottom: -12rem;
+        bottom: -27rem;
         right: 1rem;
     }
 
-
+    .theTask {
+        width: 100% !important;
+    }
+    
+    .theTask h1{
+        width: 100% !important;
+    }
 
     
 }
